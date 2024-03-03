@@ -14,6 +14,7 @@ app.use(express.static("public"));
 main().catch(err => console.log(err));
 
 async function main() {
+    mongoose.set("strictQuery", false);
   await mongoose.connect('mongodb+srv://admin-suresh:test123@cluster0.cntihcp.mongodb.net/todolistDB');
   const itemsSchema = {
     name: String 
@@ -21,17 +22,13 @@ async function main() {
   
   const Item = mongoose.model("Item", itemsSchema);
 
-  const item1 = new Item({
-    name: "Start Development "
-  });
+
   const item2 = new Item({
-    name: "Web Development "
-  });
-  const item3 = new Item({
-    name: "App Development "
+    name: "Enter the Tasks !! "
   });
 
-  const defaultItems = [item2,item3];
+
+  const defaultItems = [item2];
 
   const listSchema = {
     name: String,
