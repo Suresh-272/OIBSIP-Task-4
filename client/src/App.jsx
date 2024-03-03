@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Registration from './Registration'
 import Login from './Login';
 import Dashboard from './Dashboard';
+import InvalidUser from './InvalidUser';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Route path='/register' element={<Registration />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>
-
+        <Route path='/invalidUser' element={<InvalidUser />}></Route>
       </Routes>
     </BrowserRouter>  
   )

@@ -15,7 +15,7 @@ const Login = () => {
             if(res.data.Login){
                 navigate("/dashboard")
             } else{
-                navigate("/")
+                navigate("/invalidUser")
             }
         })
         .catch(err => console.log(err))
